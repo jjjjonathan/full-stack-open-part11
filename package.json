@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "lint": "eslint './**/*.{js,jsx}'"
+    "lint": "eslint './**/*.{js,jsx}'",
+    "build:ui": "rm -rf build && cd frontend && npm run build --prod && cp -r build ../"
   },
   "keywords": [],
   "author": "",
