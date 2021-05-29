@@ -23,5 +23,5 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'safe-tundra-33182'
+          heroku_app_name: 'aqueous-escarpment-94350'
           heroku_email: 'hornathanjon@gmail.com'
