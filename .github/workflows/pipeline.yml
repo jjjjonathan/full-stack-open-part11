@@ -19,10 +19,14 @@ jobs:
       #   run: npm run lint
       # - name: build
       #   run: npm run build:ui
-      - run: git config user.email "USER EMAIL" && git config user.name "USER NAME" && git add -A && git commit -m "Updated code"
       - name: heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'aqueous-escarpment-94350'
           heroku_email: 'hornathanjon@gmail.com'
+          justlogin: true
+      - run: |
+          # git config user.name "jjjjonathan" && git config user.email "hornathanjon@gmail.com"
+          git remote add heroku git@heroku.com:aqueous-escarpment-94350.git
+          git push heroku master
