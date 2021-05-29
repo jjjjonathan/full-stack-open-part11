@@ -19,6 +19,7 @@ jobs:
       #   run: npm run lint
       # - name: build
       #   run: npm run build:ui
+      - run: git config user.email "USER EMAIL" && git config user.name "USER NAME" && git add -A && git commit -m "Updated code"
       - name: heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
