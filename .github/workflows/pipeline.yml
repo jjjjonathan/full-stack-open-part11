@@ -19,17 +19,10 @@ jobs:
       #   run: npm run lint
       # - name: build
       #   run: npm run build:ui
-      - name: heroku login
-        uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ''
-          heroku_email: 'hornathanjon@gmail.com'
-          justlogin: true
-      - run: heroku git:remote -a safe-tundra-33182
       - name: heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'safe-tundra-33182'
           heroku_email: 'hornathanjon@gmail.com'
+          branch: main
