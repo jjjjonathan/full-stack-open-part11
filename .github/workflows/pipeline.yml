@@ -19,10 +19,9 @@ jobs:
       #   run: npm run lint
       # - name: build
       #   run: npm run build:ui
-      - name: heroku deploy it
+      - name: heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'safe-tundra-33182'
           heroku_email: 'hornathanjon@gmail.com'
-          usedocker: true
